@@ -1,0 +1,486 @@
+<!DOCTYPE html PUBLIC>
+
+<!-- @NUCLEARTHEMES ON TUMBLR || PLEASE DON'T DELETE CREDIT -->
+
+<!-- 
+|| CREDITS ||
+
+Custom tooltips by Atomiks >> https://atomiks.github.io/tippyjs/
+
+Fonts from Google >> https://fonts.google.com/
+
+Placeholders from Unsplash >> https://unsplash.com/
+
+-->
+
+<html>
+ 
+<head>
+ 
+<title>{Chai} / title</title> <!-- page title -->
+
+
+<link rel="shortcut icon" href="{Favicon}">
+
+<link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,400i,700,700i|Covered+By+Your+Grace:400,400i,700,700i|Lora:400,400i,700,700i" rel="stylesheet">
+
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+<style type="text/css">
+
+/* ----------------------------------------------------------------------- */
+/* --------------------------- custom tooltips --------------------------- */
+
+.tippy-tooltip.custom-theme {
+    background-color: #e3bcb6;
+    border-radius: 0px;
+    color: #f9f5f5;
+    font-family: inherit;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* ----------------------------------------------------------------------- */
+/* -------------------- custom selection & scrollbar --------------------- */
+
+::-moz-selection {background: #f9f5f5; color: #d9b4af;}
+::selection {background: #f9f5f5; color: #d9b4af;}
+
+::-webkit-scrollbar-thumb {background: #d9b4af;}
+::-webkit-scrollbar {background: #f9f5f5; width: 5px;}
+
+* {margin:0; padding:0;}
+
+/* ----------------------------------------------------------------------- */
+/* ---------------------------- large blocks ----------------------------- */
+
+body {
+    background: #bdbfc5;                /* background color */
+    color: #bdbfc5;                     /* text color */
+    font-family: Fira Sans;             /* font */
+    font-size: 14px;                    /* font size */
+    text-align: justify;                /* text align */
+}
+
+#container {
+    background: #1D1D1D;                /* container background color */
+    height: 550px;
+    left: 50%;
+    margin-bottom: 40px;
+    overflow: none;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 700px;
+}
+
+#header {                               /* 700 x 180 */
+    background-color: #bdbfc5;
+    height: 180px;
+    width: 700px;
+}
+
+#content {                              /* container content below header */
+    height: 290px;
+    margin-top: 40px;
+    overflow: none;
+    padding: 20px;
+    width: 660px;
+}
+
+/* ----------------------------------------------------------------------- */
+/* -------------------------------- text --------------------------------- */
+
+h1 {                                    /* main title */
+    color: #bdbfc5;
+    font-family: Covered By Your Grace;
+    font-size: 2.5em;
+    font-style: italic;
+    font-weight: normal;
+    position: fixed;
+    right: 2%;
+    top: 33%;
+    z-index: 999;
+}
+
+h2 {                                    /* block titles */
+    background-color: #bdbfc5;
+    color: #7b7e95;
+    font-family: Lora;
+    font-size: 1.2em;
+    font-weight: normal;
+    padding: 10px;
+    text-align: center;
+    width: 252px;
+}
+
+a {
+    color: #7b7e95;                     /* link color */
+    text-decoration: none;
+}
+
+a:hover {   
+    color: #7b7e95;                     /* link hover color */
+    transition: 0.4s;
+}
+
+b {                                     /* bold text */
+    color: #7b7e95;
+}
+
+i {                                     /* italic text */
+    color: #7b7e95;
+}
+
+/* ----------------------------------------------------------------------- */
+/* --------------------------- layout content ---------------------------- */
+
+#picture {                              /* icon */
+    border-radius: 100%;
+    left: 43%;
+    position: fixed;
+    top: 23%;
+    width: 100px;
+    z-index: 999;
+}
+
+#picture:hover {                        /* icon hover */
+    cursor: cell;
+    transform: scale(1.1);
+    transition: 0.4s;
+    -webkit-filter: contrast(110%);
+}
+
+#leftblock {                            /* container for left content */
+    float: left;
+    height: 290px;
+    width: 270px;
+}
+
+#rightblock {                           /* container for right content */
+    float: right;
+    height: 290px;
+    width: 270px;
+}
+
+.borderblock {                          /* bordered blocks of content */
+    border: 1px solid #7b7e95;
+    border-top: none;
+    height: 225px;
+    padding: 10px;
+    width: 250px;
+}
+
+#aesthetic {                            /* container for middle colors */
+    float: left;
+    height: 288px;
+    margin-left: 23px;
+    width: 72px;
+}
+
+/* ----------------------------------------------------------------------- */
+/* ------------------------------- content ------------------------------- */
+
+.colors {                               /* color blocks */
+    background: blue;
+    height: 72px;
+    width: 72px;
+}
+
+/* change colors here! :D */
+
+#color1 {background-color:#7b7e95;}
+#color2 {background-color:#a3a7cc;}
+#color3 {background-color:#adaecc;}
+#color4 {background-color:#b0c0d0;}
+
+#left {                                 /* left column */
+    border-right: 1px solid #a3a7cc;
+    float: left;
+    font-weight: bold;
+    height: 120px;
+    line-height: 20px;
+    margin-right: 20px;
+    padding-right: 20px;
+    text-transform: uppercase;
+    width: 104px;
+}
+
+#right {                                /* right column */
+    float: left;
+    height: 120px;
+    line-height: 20px;
+    width: 105px;
+}
+
+#bio {                                  /* bio container */
+    float: left;
+    height: 90px;
+    margin-top: 15px;
+    overflow: auto;
+    width: 250px;
+    -ms-overflow-style: none;
+}
+
+#bio::-webkit-scrollbar {
+    display: none;
+}
+
+.links {                                /* links in right block */
+    background-color: #a3a7cc;
+    color: #ffffff;
+    display: inline-block;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.links:hover {                          /* hover links */
+    background-color: #7b7e95;
+    color: #ffffff;
+    transition: 0.4s;
+}
+
+/* ----------------------------------------------------------------------- */
+/* ------------------------------- credits ------------------------------- */
+
+#credit {
+    color: #ffffff;
+    bottom: 0;
+    display: inline;
+    font-style: italic;
+    margin: 10px;
+    position: fixed;
+    right: 0;
+}
+
+#credit:hover {
+    color: #7b7e95;
+    transition: 0.4s;
+}
+
+/* ----------------------------------------------------------------------- */
+    
+</style>
+    
+</head>
+
+<body>
+
+<!--------------------------- START MAIN CONTENT---------------------------->
+
+<div id="container">
+
+    <!-- header image -->
+
+    <img id="header" src="https://img.xatblog.net/image/ylW7KDwRjW.gif">
+    
+    <!-- main title -->
+    
+    <h1>Sailorscout Chai</h1>
+    
+    <!-- icon image -->
+    
+    <a href="/">
+        <img id="picture" title="{Chai}" src="https://img.xatblog.net/image/6xtexLklVgV.jpg">
+    </a>
+    
+    <!-- START CONTENT -->
+    
+    <div id="content">
+    
+        <!-- start left block -->
+    
+        <div id="leftblock">
+            
+            <!-- left block title -->
+            
+            <h2>>> finding a vibe like you</h2>
+            
+            <!-- start left content -->
+        
+            <div class="borderblock">
+                
+                <!-- left column -->
+                
+                <div id="left">
+                    name
+                    <br>
+                    age
+                    <br>
+                    gender
+                    <br>
+                    pronouns
+                    <br>
+                    curently
+                    <br>
+                    zodiac
+                </div>
+                
+                <!-- right column -->
+                
+                <div id="right">
+                    chai
+                    <br>
+                    8/16
+                    <br>
+                    female
+                    <br>
+                    she/her
+                    <br>
+                    not interested
+                    <br>
+                    leo
+                </div>
+                
+                <!-- bio -->
+                
+                <div id="bio">
+
+You can message/find me here at <a href="https://xat.com/AnimeandVamps">animeandvamps</a> or on <a href="https://discord.gg/5pDp79Bg">discord</a>. I may not respond quickly, but I promise you I will! Small talk is boring so lets get to know one another soon. 
+
+                </div>
+                
+            </div>
+            
+            <!-- end left content -->
+        
+        </div>
+        
+        <!-- end left block -->
+        
+        <!-- start color block -->
+        
+        <div id="aesthetic">
+            
+            <div class="colors" id="color1"></div>
+            <div class="colors" id="color2"></div>
+            <div class="colors" id="color3"></div>
+            <div class="colors" id="color4"></div>
+            
+        </div>
+        
+        <!-- end color block -->
+        
+        <!-- start right block -->
+        
+        <div id="rightblock">
+        
+            <!-- right block title -->
+            
+            <h2>>> is just what I needed</h2>
+            
+            <!-- start right content -->
+            
+            <div class="borderblock">
+                
+                <a href="" title="in the">
+                    <div class="links">
+                        fighting
+                    </div>
+                </a>
+                
+                <a href="" title="name of the">
+                    <div class="links">
+                        evil by
+                    </div>
+                </a>
+                
+                <a href="" title="moon!">
+                    <div class="links">
+                        moonlight
+                    </div>
+                </a>
+                
+                <a href="https://xat.me/Isaac" title="papa">
+                    <div class="links">
+                        winning love ♡ 
+                    </div>
+                </a>
+                
+                <a href="https://xat.me/MisterHedgehog" title="Sonic">
+                    <div class="links">
+                          by daylight ☼
+                    </div>
+                </a>
+                
+                <a href="https://xat.me/Nepu" title="Nepu">
+                    <div class="links">
+                        NEVER running from
+                    </div>
+                </a>
+                
+                <a href="https://xat.me/xRaidSendo" title="Raid">
+                    <div class="links">
+                         a real fight!
+                    </div>
+                </a>
+                
+                <a href="" title="ଘ(੭ ˘ ᵕ˘)━☆ﾟ.*･｡ﾟᵕ꒳ᵕ~">
+                    <div class="links">
+                        she is the one
+                    </div>
+                </a>
+                
+                <a href="" title="୨୧° ♡ °୨୧">
+                    <div class="links">
+                          𓆩♡𓆪 Sailormoon!
+                    </div>
+                </a>
+                
+                <a href="" title="˗ˋˏ°•୨❤୧•°ˎˊ˗">
+                    <div class="links">
+                           ପ(๑•ᴗ•๑)ଓ ♡
+                    </div>
+                </a>
+                
+                <a href="" title="(๑>؂•̀๑)">
+                    <div class="links">
+                        ⁺˚*•̩̩͙✩•̩̩͙*˚⁺‧͙⁺˚*•̩̩͙⋆♡
+                 </div>
+                 </a>
+            </div>
+            
+            <!-- end right content -->
+            
+        </div>
+        
+        <!-- end right block -->
+    
+    </div>
+    
+    <!-- END CONTENT -->
+    
+</div>
+
+<!---------------------------- END MAIN CONTENT----------------------------->
+
+<!-- don't edit beyond this point please! colors can be modified in <style> -->
+
+<a id="credit" target="blank" href="https://nuclearthemes.tumblr.com/">
+    page theme by bones.
+</a>
+
+<script src="https://unpkg.com/popper.js@1"></script>
+<script src="https://unpkg.com/tippy.js@5/dist/tippy-bundle.iife.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/tippy.js@5/dist/svg-arrow.css" />
+
+<script>
+    tippy('[title]', {
+        theme: 'custom',
+        arrow: false,
+        delay: [200, 0],
+        zIndex: 9999999999,
+        maxWidth: 300,
+
+        content(reference) {
+            const title = reference.getAttribute('title');
+            reference.removeAttribute('title');
+            return title;
+        },
+    });
+</script>
+
+</body>
+
+</html>
+
