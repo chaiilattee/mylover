@@ -1,481 +1,808 @@
-<!DOCTYPE html PUBLIC>
+<!-----------------------------------------------------------------------
+About Page [13]: Breeze
+Made by glenthemes
 
-<!-- @NUCLEARTHEMES ON TUMBLR || PLEASE DON'T DELETE CREDIT -->
+Initial release: 2019/04/13
+Last updated: 2022/09/14
 
-<!-- 
-|| CREDITS ||
-Custom tooltips by Atomiks >> https://atomiks.github.io/tippyjs/
-Fonts from Google >> https://fonts.google.com/
-Placeholders from Unsplash >> https://unsplash.com/
--->
+TERMS OF USE:
+1) Do not remove the page credit.
+2) Do not repost/redistribute my themes.
+3) Do not take parts of the code and use it as your own.
+4) Do not use my themes as a base code.
+5) Do not mix my themes together.
 
-<html>
+Please read the guide!
+↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓
+docs.google.com/document/d/12xWee3PwkoHk3z2n3Zf7VHCtFlagLjV90jInsyZIRWY/edit?usp=sharing
+
+Credits:
+- Intro block feather header gif by @servphim
+  servphim.tumblr.com/post/160491275855
+- Icon images by @emilylkinney
+  emilylkinney.tumblr.com/icons
+- Percentage graphs by @suiomi
+  suiomi.com/post/181320974554
+- Feather icon font by colebemis @ twitter
+  feathericons.com
+- 'FontAwesome' icon font
+  fontawesome.com/
+  icon list:   fontawesome.com/icons
+------------------------------------------------------------------------>
  
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "//www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="//www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
 <head>
  
-<title>{squeezeme;don't teaseme} / title</title> <!-- page title -->
-
-
+<title>{Title}</title>
+ 
 <link rel="shortcut icon" href="{Favicon}">
 
-<link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,400i,700,700i|Covered+By+Your+Grace:400,400i,700,700i|Lora:400,400i,700,700i" rel="stylesheet">
+<!--------------------JAVASCRIPTS-------------------->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script src="//static.tumblr.com/iuw14ew/VSQma1786/jquery.style-my-tooltips.js"></script>
+<script>
+(function($){
+$(document).ready(function(){
+$("a[title]").style_my_tooltips({
+tip_follows_cursor:true,
+tip_delay_time:0,
+tip_fade_speed:250,
+attribute:"title"
+});
+});
+})(jQuery);
+</script>
+ 
+<link href="//fonts.googleapis.com/css?family=Quicksand:500|Karla" rel="stylesheet">
 
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
+<script src="//static.tumblr.com/2pnwama/DLppehqvd/feathericons.js"></script>
+
+<script src="//static.tumblr.com/2pnwama/csBppxn8i/breeze.js"></script>
+ 
+<!-------------------------------------------------------------------->
+ 
 <style type="text/css">
-
-/* ----------------------------------------------------------------------- */
-/* --------------------------- custom tooltips --------------------------- */
-
-.tippy-tooltip.custom-theme {
-    background-color: #ffffff;
-    border-radius: 0px;
-    color: #ef908d;
-    font-family: inherit;
-    margin-bottom: 10px;
-    text-align: center;
+ 
+/*--------------------TOOLTIPS--------------------*/
+#s-m-t-tooltip {
+    padding:5px 10px;
+    margin:20px;
+    background-color:var(--Tooltip-Background);
+    border-radius:3px;
+    font-family:karla;
+    font-size:9px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    color:var(--Tooltip-Text);
+    z-index:99;
+    max-width:40vw;
+}
+ 
+/*--------------------TUMBLR CONTROLS--------------------*/
+#plus-s {
+    position:fixed;
+    top:0;margin-top:17px;
+    right:0;margin-right:15px;
+    z-index:10;
 }
 
-/* ----------------------------------------------------------------------- */
-/* -------------------- custom selection & scrollbar --------------------- */
+#plus-s svg {
+    width:15px;height:15px;
+    color:var(--Top-Right-Plus-Icon);
+}
 
-::-moz-selection {background: #d9b4af; color: #d9b4af;}
-::selection {background: #d9b4af; color: #d9b4af;}
+iframe#tumblr_controls, .iframe-controls--desktop {
+    top:calc(1px + 5px)!important;
+    right:calc(5px)!important;
+    padding-right:40px;
+    position:fixed!important;
+    
+    /* delete these 2 lines if you want white tumblr controls */
+    filter:invert(100%) hue-rotate(180deg);
+    -webkit-filter:invert(100%) hue-rotate(180deg);
+    
+    transform:scale(0.7,0.7);
+    -webkit-transform:scale(0.7,0.7);
+    -moz-transform:scale(0.7,0.7);
+    -ms-transform:scale(0.7,0.7);
+    -o-transform:scale(0.7,0.7);
+    
+    transform-origin:100% 0;
+    -webkit-transform-origin:100% 0;
+    -moz-transform-origin:100% 0;
+    -ms-transform-origin:100% 0;
+    -o-transform-origin:100% 0;
+    z-index:999999!important;
+    
+    opacity:0; /* delete this line if you want visible tumblr controls */
+    
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+}
 
-::-webkit-scrollbar-thumb {background: #d9b4af;}
-::-webkit-scrollbar {background: #d9b4af; width: 5px;}
+iframe#tumblr_controls:hover, .iframe-controls--desktop:hover {
+    opacity:1;
+}
+ 
+/*--------------------SCROLLBAR--------------------*/
+::-webkit-scrollbar {
+    background-color:var(--Scrollbar-BG);
+    height:13px;
+    width:13px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    background-color:var(--Scrollbar);
+    border:6px solid var(--Scrollbar-BG);
+}
+ 
+::-webkit-scrollbar-track {
+    background-color:var(--Scrollbar-BG);
+}
 
-* {margin:0; padding:0;}
-
-/* ----------------------------------------------------------------------- */
-/* ---------------------------- large blocks ----------------------------- */
-
+/*-----------------COLORS & VALUES-----------------*/
+:root {
+    /* column styling */
+    --Column-1-Width:250px;
+    --Column-2-Width:260px;
+    --Column-3-Width:250px;
+    --Column-Gap:25px;
+    --Items-Background-Color:#fff;
+    --Box-Shadow:#f7f7f7;
+    
+    /* 1st column */
+    --Intro-Box-Title:#333;
+    --Intro-Box-Text:#888;
+    --Intro-Nav-Links-Icon:#333;
+    --Social-Media-Icons:#333;
+    --Social-Media-Links:#333;
+    
+    /* 2nd column */
+    --Tags-Border:#eee;
+    --Tags:#999;
+    --Tags-Background-On-Hover:#37353A;
+    --Tags-Border-On-Hover:#37353A;
+    --Tags-On-Hover:#eee;
+    
+    --graphsize:73px; /* Graph size. Do not go below 60px */
+    --emptyprogress: #fafafa; /* Empty progress bar colour */
+    --progress: #333; /* Progress bar colour */
+    --fullprogress: #333; /* Progress bar colour when it's 100% */
+    --Percentage-Graph-Label:#777;
+    
+    --Color-Hex-Text:#333;
+    --Color-RGB-Text:#999;
+    
+    --Music-Controls:#222;
+    --Music-Note:#222;
+    --Song-Title:#222;
+    --Song-Artist:#999;
+    
+    /* 3rd column */
+    --Info-Icons:#eee;
+    --Info-Icons-BG:#333;
+    --Info-Text:#888;
+    --Info-Bold:#222;
+    
+    --Video-Top-Text-1:#222;
+    --Video-Top-Text-2:#999;
+    --Video-Link-Right-Chevron:#999;
+    --Video-Controls:#fff;
+    --Video-Controls-Shadows:#333;
+    
+    --Text-Box-Text:#888;
+    
+    /* extras, misc */
+    --Top-Right-Plus-Icon:#333;
+    --Tooltip-Background:#222;
+    --Tooltip-Text:#eee;
+    --Highlighted-Text-BG:#fafafa;
+    --Highlighted-Text:#222;
+    --Scrollbar-BG:#fafafa;
+    --Scrollbar:#666;
+    --Links:#000;
+}
+ 
+/*--------------------BASICS--------------------*/
 body {
-    background: #c887dd;                /* background color */
-    color: #666564;                     /* text color */
-    font-family: Fira Sans;             /* font */
-    font-size: 14px;                    /* font size */
-    text-align: justify;                /* text align */
-}
-
-#container {
-    background: #F1D9FA;                /* container background color */
-    height: 550px;
-    left: 50%;
-    margin-bottom: 40px;
-    overflow: none;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    width: 700px;
-}
-
-#header {                               /* 700 x 180 */
-    background-color: #bdbfc5;
-    height: 180px;
-    width: 700px;
-}
-
-#content {                              /* container content below header */
-    height: 290px;
-    margin-top: 40px;
-    overflow: none;
-    padding: 20px;
-    width: 660px;
-}
-
-/* ----------------------------------------------------------------------- */
-/* -------------------------------- text --------------------------------- */
-
-h1 {                                    /* main title */
-    color: #c887dd;
-    font-family: Covered By Your Grace;
-    font-size: 2.5em;
-    font-style: cursive;
-    font-weight: bold;
-    position: fixed;
-    right: 2%;
-    top: 33%;
-    z-index: 999;
-}
-
-h2 {                                    /* block titles */
-    background-color: #c196e0;
-    color: #ffffff;
-    font-family: Lora;
-    font-size: 1.2em;
-    font-weight: normal;
-    padding: 10px;
-    text-align: center;
-    width: 252px;
+    background:#9C85CD url('https://xatimg.com/image/TGrnDceu0BiF.gif');
+    background-attachment:fixed;
+    background-repeat:repeat;
+    color:#888;
+    cursor:normal;
+    font-family:karla;
+    line-height:1.6em;
+    font-size:12px;
+    text-align:left;
 }
 
 a {
-    color: #c196e0;                     /* link color */
-    text-decoration: none;
+    color:var(--Links);
+    text-decoration:none;
 }
 
-a:hover {   
-    color: #010101;                     /* link hover color */
-    transition: 0.4s;
+a, svg {
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
 }
 
-b {                                     /* bold text */
-    color: #c196e0;
+b, strong {font-weight:bold;}
+
+pre, code {
+    white-space:pre-wrap;
+    display:block;
 }
 
-i {                                     /* italic text */
-    color: #c196e0;
+::selection {
+background:var(--Highlighted-Text-BG);
+color:var(--Highlighted-Text);
+}
+ 
+::-moz-selection {
+background:var(--Highlighted-Text-BG);
+color:var(--Highlighted-Text);
+}
+ 
+/*------------CONTAINER------------*/
+#cont-h-1 {
+    position:fixed;
+    top:0;left:0;right:0;
+    margin:0 auto;
+    height:100vh;
+    text-align:center;
 }
 
-/* ----------------------------------------------------------------------- */
-/* --------------------------- layout content ---------------------------- */
+#cont-h-2 {display:inline-block;}
+#cont-v-1 {height:100vh;display:table;}
+#cont-v-2 {display:table-cell;vertical-align:middle;}
 
-#picture {                              /* icon */
-    border-radius: 100%;
-    left: 43%;
-    position: fixed;
-    top: 23%;
-    width: 100px;
-    z-index: 999;
+#columnwrap {
+    display:flex;
+    margin:calc(var(--Column-Gap) * -1) auto;
+    white-space:nowrap;
 }
 
-#picture:hover {                        /* icon hover */
-    cursor: cell;
-    transform: scale(1.1);
-    transition: 0.4s;
-    -webkit-filter: contrast(110%);
+#columnwrap > * {white-space:normal;}
+
+.column {
+    margin:calc(var(--Column-Gap) / 2);
 }
 
-#leftblock {                            /* container for left content */
-    float: left;
-    height: 290px;
-    width: 270px;
+.column:nth-child(1) {width:var(--Column-1-Width);}
+.column:nth-child(2) {width:var(--Column-2-Width);}
+.column:nth-child(3) {width:var(--Column-3-Width);}
+
+.xyz {
+    border-radius:3px;
+    overflow:hidden;
+    box-shadow:3px 3px 12px var(--Box-Shadow);
 }
 
-#rightblock {                           /* container for right content */
-    float: right;
-    height: 290px;
-    width: 270px;
+/*------------1ST COLUMN------------*/
+.intro-block {width:inherit;}
+
+.intro-header {
+    position:relative;
+    width:100%;
 }
 
-.borderblock {                          /* bordered blocks of content */
-    border: 1px solid #f9f9f9;
-    border-top: none;
-    height: 225px;
-    padding: 10px;
-    width: 250px;
+.intro-avatar {
+    position:relative;
+    display:block;
+    vertical-align:middle;
+    margin:calc((-64px / 2) - 8px) auto;
+    width:64px;height:64px;
+    background:var(--Items-Background-Color);
+    border-radius:100%;
+    border:8px solid var(--Items-Background-Color);
 }
 
-#aesthetic {                            /* container for middle colors */
-    float: left;
-    height: 288px;
-    margin-left: 23px;
-    width: 72px;
+.intro-pad {
+    padding:calc((64px / 2) + 8px + 8px) 14px 14px 14px;
+    background:var(--Items-Background-Color);
 }
 
-/* ----------------------------------------------------------------------- */
-/* ------------------------------- content ------------------------------- */
-
-.colors {                               /* color blocks */
-    background: blue;
-    height: 72px;
-    width: 72px;
+.intro-title {
+    margin-bottom:8px;
+    font-family:quicksand;
+    font-size:13px;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    color:var(--Intro-Box-Title);
 }
 
-/* change colors here! :D */
-
-#color1 {background-color:#bb8be0;}
-#color2 {background-color:#c196e0;}
-#color3 {background-color:#dfaeef;}
-#color4 {background-color:#e9b8f9;}
-
-#left {                                 /* left column */
-    border-right: 1px solid #c196e0;
-    float: left;
-    font-weight: bold;
-    height: 120px;
-    line-height: 20px;
-    margin-right: 20px;
-    padding-right: 20px;
-    text-transform: uppercase;
-    width: 104px;
+.intro-desc {
+    font-size:12px;
+    line-height:1.8em;
+    color:var(--Intro-Box-Text);
 }
 
-#right {                                /* right column */
-    float: left;
-    height: 120px;
-    line-height: 20px;
-    width: 105px;
+.navlinks {
+    margin-top:16px;
+    text-align:center;
 }
 
-#bio {                                  /* bio container */
-    float: left;
-    height: 90px;
-    margin-top: 15px;
-    overflow: auto;
-    width: 250px;
-    -ms-overflow-style: none;
+.navlinks a {
+    display:inline-block;
+    padding:0 6px;
 }
 
-#bio::-webkit-scrollbar {
-    display: none;
+.navlinks svg {
+    width:12px;height:12px;
+    color:var(--Intro-Nav-Links-Icon);
+    stroke-width:2px;
 }
 
-.links {                                /* links in right block */
-    background-color: #b674cc;
-    color: #ffffff;
-    display: inline-block;
-    margin-bottom: 10px;
-    padding: 10px;
+.social-media {
+    margin-top:var(--Column-Gap);
+    background:var(--Items-Background-Color);
+    padding:16px;
+    text-align:left;
 }
 
-.links:hover {                          /* hover links */
-    background-color: #dfaeef;
-    color: #ffffff;
-    transition: 0.4s;
+.social-media a {
+    display:flex;
+    padding:7px 0;
+    width:100%;
 }
 
-/* ----------------------------------------------------------------------- */
-/* ------------------------------- credits ------------------------------- */
-
-#credit {
-    color: #ffffff;
-    bottom: 0;
-    display: inline;
-    font-style: italic;
-    margin: 10px;
-    position: fixed;
-    right: 0;
+.social-media a > * {
+    align-self:center;
+    -webkit-align-self:center;
 }
 
-#credit:hover {
-    color: #dfaeef;
-    transition: 0.4s;
+.social-media a:first-child {padding-top:0px;}
+.social-media a:last-child {padding-bottom:0px;}
+
+.social-media i {
+    font-size:14px;
+    color:var(--Social-Media-Icons);
 }
 
-/* ----------------------------------------------------------------------- */
-    
+.social-media-links {
+    margin-left:13px;
+    font-family:quicksand;
+    text-transform:uppercase;
+    font-size:9px;
+    letter-spacing:1px;
+    color:var(--Social-Media-Links);
+}
+
+/*------------2ND COLUMN------------*/
+.tagsbox {
+    padding:16px;
+    background:var(--Items-Background-Color);
+}
+
+.tags {
+    margin:-6px -4px;
+}
+
+.tags a {
+    display:inline-block;
+    margin:6px 4px;
+    padding:4px 9px;
+    border:1px solid var(--Tags-Border);
+    border-radius:3px;
+    text-transform:uppercase;
+    font-size:9px;
+    letter-spacing:1px;
+    color:var(--Tags);
+}
+
+.tags a:hover {
+    background:var(--Tags-Background-On-Hover);
+    border:1px solid var(--Tags-Border-On-Hover);
+    color:var(--Tags-On-Hover);
+}
+
+.percentage-box {
+    margin-top:var(--Column-Gap);
+    padding:16px;
+    background:var(--Items-Background-Color);
+}
+
+.wheel-block {
+    display:flex;
+    justify-content:space-around;
+    -webkit-justify-content:space-around;
+    -moz-justify-content:space-around;
+}
+
+.one-wheel {}
+
+.wheel-text {
+    margin-top:16px;
+    font-family:quicksand;
+    text-transform:uppercase;
+    font-size:9px;
+    letter-spacing:1px;
+    color:var(--Percentage-Graph-Label);
+}
+
+.s-pgraph:after{box-shadow:0 0 0 transparent!important;}
+.s-pgraph:after{background:var(--Items-Background-Color)!important;}
+
+.colorbox {
+    margin-top:var(--Column-Gap);
+    padding:16px;
+    background:var(--Items-Background-Color);
+}
+
+.one-color-row {
+    margin-bottom:10px;
+    display:flex;
+}
+
+.one-color-row:last-child {margin-bottom:0px;}
+
+.one-color-row > * {
+    align-self:center;
+    -webkit-align-self:center;
+}
+
+.color {
+    width:36px;
+    height:15px;
+    border-radius:3px;
+}
+
+.color-hex, .color-rgb {
+    margin-left:12px;
+    font-family:quicksand;
+    text-transform:uppercase;
+    font-size:9px;
+    letter-spacing:1px;
+}
+
+.color-hex {color:var(--Color-Hex-Text);}
+.color-rgb {color:var(--Color-RGB-Text);}
+
+.musicbox {
+    margin-top:var(--Column-Gap);
+    padding:16px;
+    background:var(--Items-Background-Color);
+    text-align:left;
+    display:flex;
+}
+
+.musicbox > * {
+    align-self:center;
+    -webkit-align-self:center;
+}
+
+.music-controls {
+   user-select:none;
+   -webkit-user-select:none;
+   width:12px;
+   font-size:12px;
+   cursor:pointer;
+}
+
+.playy, .pausee {color:var(--Music-Controls);}
+.pausee {display:none;}
+
+.sonata {
+   margin-left:10px;
+   color:var(--Music-Note);
+}
+
+.labeltext {margin-left:13px;}
+
+.song-title {
+    font-size:12px;
+    color:var(--Song-Title);
+}
+
+.song-artist {
+    margin-top:-2px;
+    font-size:10px;
+    letter-spacing:0.5px;
+    text-transform:uppercase;
+    color:var(--Song-Artist);
+}
+
+/*------------3RD COLUMN------------*/
+.info {
+    padding:16px;
+    background:var(--Items-Background-Color);
+    text-align:left;
+}
+
+.info-row {
+    display:flex;
+    margin-bottom:10px;
+}
+
+.info-row:last-child {margin-bottom:0px;}
+
+.info-row > * {
+    align-self:center;
+    -webkit-align-self:center;
+}
+
+.info-row svg {
+    padding:8px;
+    background:var(--Info-Icons-BG);
+    border-radius:3px;
+    width:12px;
+    height:12px;
+    color:var(--Info-Icons);
+}
+
+.info-label {
+    margin-left:12px;
+    font-size:10px;
+    text-transform:uppercase;
+    letter-spacing:0.5px;
+    font-weight:bold;
+    color:var(--Info-Bold);
+}
+
+.info-txt {
+    margin-top:-0.3px;
+    margin-left:5px;
+    font-size:12px;
+    color:var(--Info-Text);
+}
+
+.video {
+    position:relative;
+    margin-top:var(--Column-Gap);
+    padding:16px;
+    background:var(--Items-Background-Color);
+}
+
+.vid-source {
+    display:flex;
+    margin-bottom:16px;
+    justify-content:space-between;
+    -webkit-justify-content:space-between;
+    -moz-justify-content:space-between;
+}
+
+.vid-source > * {
+    align-self:center;
+    -webkit-align-self:center;
+}
+
+.vid-i-left {
+    display:flex;
+}
+.vid-i-left > * {
+    align-self:center;
+    -webkit-align-self:center;
+}
+
+.vid-avatar {
+    width:30px;height:30px;
+    border-radius:100%;
+}
+
+.vid-text {
+    margin-left:13px;
+    text-align:left;
+}
+
+.vid-txt-top {
+    font-size:12px;
+    color:var(--Video-Top-Text-1);
+}
+
+.vid-txt-bot {
+    margin-top:-2px;
+    font-size:10px;
+    letter-spacing:0.5px;
+    text-transform:uppercase;
+    color:var(--Video-Top-Text-2);
+}
+
+.vid-i-right svg {
+    width:13px;height:13px;
+    padding:5px 0 5px 5px;
+    color:var(--Video-Link-Right-Chevron);
+}
+
+.video iframe, .video embed, .video video {
+    width:100%;
+    height:auto;
+    border-radius:3px;
+}
+
+.v-ha {
+    position:absolute;
+    width:calc(var(--Column-3-Width) - (16px * 2));
+    display:table;
+}
+
+.v-hb {
+    display:table-cell;
+    vertical-align:middle;
+}
+
+.v-hc {
+    margin-top:-2px;
+    user-select:none;
+    -webkit-user-select:none;
+    display:inline-block;
+    z-index:10;
+    text-align:center;
+}
+
+.v-play, .v-pause {
+    margin-top:-5px;
+    padding:10px;
+    color:var(--Video-Controls);
+    text-shadow:1px 1px 1px var(--Video-Controls-Shadow);
+    font-size:17px;
+    cursor:pointer;
+}
+
+.v-pause {display:none;}
+
+.v-p {
+    opacity:0;
+    -webkit-transition: opacity 200ms ease-in-out;
+    -moz-transition: opacity 200ms ease-in-out;
+    -o-transition: opacity 200ms ease-in-out;
+}
+
+.v-ha:hover .v-p {opacity:1;}
+
+.textbox {
+    margin-top:var(--Column-Gap);
+    padding:18px 20px;
+    background:var(--Items-Background-Color);
+    font-size:12px;
+    color:var(--Text-Box-Text);
+    line-height:1.8em;
+    text-align:justify;
+}
+ 
 </style>
-    
+ 
 </head>
-
+ 
 <body>
 
-<!--------------------------- START MAIN CONTENT---------------------------->
+<!----TUMBLR CONTROLS---->
+<div id="plus-s"><i data-feather="plus"></i></div>
 
-<div id="container">
+<!----CONTAINER---->
+<div id="cont-h-1">
+<div id="cont-h-2">
+<div id="cont-v-1">
+<div id="cont-v-2">
+<div id="columnwrap">
 
-    <!-- header image -->
-
-    <img id="header" src="https://img.xatblog.net/image/euZUObTiNd.gif">
+<!---------------------------------------------->
+<!----1ST COLUMN---->
+<div class="column">
+    <div class="intro-block xyz">
     
-    <!-- main title -->
-    
-    <h1>Sailorscout Chai</h1>
-    
-    <!-- icon image -->
-    
-    <a href="/">
-        <img id="picture" title="{mama'chai}" src="https://img.xatblog.net/image/PYTfq44bY.gif">
-    </a>
-    
-    <!-- START CONTENT -->
-    
-    <div id="content">
-    
-        <!-- start left block -->
-    
-        <div id="leftblock">
-            
-            <!-- left block title -->
-            
-            <h2>✧ そばにいてください。</h2>
-            
-            <!-- start left content -->
+        <!----HEADER IMAGE---->
+        <img class="intro-header" src="https://xatimg.com/image/gIzgMKvtVNXF.jpg">
         
-            <div class="borderblock">
-                
-                <!-- left column -->
-                
-                <div id="left">
-                    name
-                    <br>
-                    birthday
-                    <br>
-                    gender
-                    <br>
-                    pronouns
-                    <br>
-                    curently
-                    <br>
-                    zodiac
-                </div>
-                
-                <!-- right column -->
-                
-                <div id="right">
-                    chai
-                    <br>
-                    8/16
-                    <br>
-                    female
-                    <br>
-                    she/her
-                    <br>
-                    not interested
-                    <br>
-                    leo
-                </div>
-                
-                <!-- bio -->
-                
-                <div id="bio">
-
-You can message/find me here at <a href="https://xat.com/AnimeandVamps">animeandvamps</a> or on <a href="https://discord.gg/5pDp79Bg">discord</a>. I may not respond quickly, but I promise you I will! Small talk is boring so lets get to know one another soon. 
-
-                </div>
-                
-            </div>
-            
-            <!-- end left content -->
+        <!----HEADER AVATAR ICON IMAGE---->
+        <img class="intro-avatar" src="https://xatimg.com/image/jLe72UxeKdSR.jpg">
         
+        <div class="intro-pad">
+        
+        <!----DESCRIPTION TITLE--->
+        <div class="intro-title">𐔌   .  𝓒𝓱𝓲𝓬𝓪  .ᐟ  ֹ    ꒱</div>
+        
+        <!----DESCRIPTION---->
+        <div class="intro-desc">
+           ┆sleepy┆
+            <br>┆tulsa, oklahoma┆
+            <br>──────˚₊‧ ୨୧ ‧₊˚──────
+        </div><!--end desc-->
+        
+        <!----DESCRIPTION NAV LINKS---->
+        <!--you can choose one from this list:-->
+        <!--https://feathericons.com/-->
+        <!--put the name between the quotation marks of feather=""-->
+        <div class="navlinks">
+        <a href="https://xat.com/bleach" title="you're"><i data-feather="star"></i></a>
+        <a href="https://xat.me/Chica" title="a"><i data-feather="star"></i></a>
+        <a href="https://xat.me/Ecchi" title="shining"><i data-feather="star"></i></a>
+        <a href="https://xat.me/vegito" title="star"><i data-feather="star"></i></a>
+        
+       
+        </div><!--navlinks end-->
+        
+        </div><!--intro-pad--><!--do not delete this line-->
+    </div><!--intro-block--><!--do not delete this line-->
+    
+    
+    
+    <!----SOCIAL MEDIA LINKS---->
+    <!--icon list:-->
+    <!--//fontawesome.com/icons-->
+     
+    </div><!--end social media-->
+</div><!--end 1st column-->
+
+
+
+<!---------------------------------------------->
+<!----2ND COLUMN---->
+<div class="column">
+
+   
+                
+                <!--% IN TENS ONLY-->
+                <!--e.g. p10, p20, p30-->
+                <div class="s-pgraph p60">
+                
+                <div class="s-pgraph-container">
+                <div class="s-pgraph-empty"></div>
+                <div class="s-pgraph-progress"></div></div></div></a>
+                </div><!--wheel-->
+                
+              
+          
+            
+            
+            <!----PERCENTAGE GRAPH 2---->
+            <div class="one-wheel">
+            <div class="wheel">
+                <a href="//suiomi.com" class="spc">
+                
+                <!--% IN TENS ONLY-->
+                <!--e.g. p10, p20, p30-->
+                <div class="s-pgraph p80">
+                
+                <div class="s-pgraph-container">
+                <div class="s-pgraph-empty"></div>
+                <div class="s-pgraph-progress"></div></div></div></a>
+                </div><!--wheel-->
+                
+        
+            
+        </div><!--wheel-block--><!--do not delete this line-->
+    </div><!--percentage-box--><!--do not delete this line-->
+    
+   
+ 
+
+
+
+    <!--do not delete below-->
+    <div class="v-h">
+    <div class="v-ha">
+    <div class="v-hb">
+        <div class="v-hc">
+            <div class="v-play">▶</div>
+            <div class="v-p"><div class="v-pause">❚❚</div></div>
         </div>
-        
-        <!-- end left block -->
-        
-        <!-- start color block -->
-        
-        <div id="aesthetic">
-            
-            <div class="colors" id="color1"></div>
-            <div class="colors" id="color2"></div>
-            <div class="colors" id="color3"></div>
-            <div class="colors" id="color4"></div>
-            
-        </div>
-        
-        <!-- end color block -->
-        
-        <!-- start right block -->
-        
-        <div id="rightblock">
-        
-            <!-- right block title -->
-            
-            <h2> 𝑃𝑙𝑒𝑎𝑠𝑒 𝑠𝑡𝑎𝑦 𝑏𝑦 𝑚𝑦 𝑠𝑖𝑑𝑒 ♡</h2>
-            
-            <!-- start right content -->
-            
-            <div class="borderblock">
-                
-                <a href="" title="in the">
-                    <div class="links">
-                        fighting
-                    </div>
-                </a>
-                
-                <a href="" title="name of the">
-                    <div class="links">
-                        evil by
-                    </div>
-                </a>
-                
-                <a href="" title="moon!">
-                    <div class="links">
-                        moonlight
-                    </div>
-                </a>
-                
-                <a href="https://xat.me/Isaac" title="papa">
-                    <div class="links">
-                        winning love ♡ 
-                    </div>
-                </a>
-                
-                <a href="https://xat.me/MisterHedgehog" title="Sonic">
-                    <div class="links">
-                          by daylight ☼
-                    </div>
-                </a>
-                
-                <a href="https://xat.me/Nepu" title="Nepu">
-                    <div class="links">
-                        NEVER running from
-                    </div>
-                </a>
-                
-                <a href="https://xat.me/xRaidSendo" title="Raid">
-                    <div class="links">
-                         a real fight!
-                    </div>
-                </a>
-                
-                <a href="https://xat.me/NewBeginnings" title="Ash">
-                    <div class="links">
-                        she is the one
-                    </div>
-                </a>
-                
-                <a href="https://xat.me/Royalty" title="Leia">
-                    <div class="links">
-                          𓆩♡𓆪 Sailormoon!
-                    </div>
-                </a>
-                
-                <a href="" title="˗ˋˏ°•୨❤୧•°ˎˊ˗">
-                    <div class="links">
-                           ପ(๑•ᴗ•๑)ଓ ♡
-                    </div>
-                </a>
-                
-                <a href="" title="(๑>؂•̀๑)">
-                    <div class="links">
-                        ⁺˚*•̩̩͙✩•̩̩͙*˚⁺‧͙⁺˚*•̩̩͙⋆♡
-                 </div>
-                 </a>
-            </div>
-            
-            <!-- end right content -->
-            
-        </div>
-        
-        <!-- end right block -->
+    </div><!--v-hb-->
+    </div><!--v-ha-->
+    </div><!--v-h-->
+    </div><!--video-->
     
-    </div>
     
-    <!-- END CONTENT -->
+    <!----TEXTBOX---->
+    <div class="textbox xyz">
+        hello i'm the textbox.
+        <br>looks best with
+        <br>3 lines.
+    </div><!--textbox--><!--do not delete below-->
     
-</div>
-
-<!---------------------------- END MAIN CONTENT----------------------------->
-
-<!-- don't edit beyond this point please! colors can be modified in <style> -->
-
-<a id="credit" target="blank" href="https://nuclearthemes.tumblr.com/">
-    page theme by bones.
-</a>
-
-<script src="https://unpkg.com/popper.js@1"></script>
-<script src="https://unpkg.com/tippy.js@5/dist/tippy-bundle.iife.js"></script>
-<link rel="stylesheet" href="https://unpkg.com/tippy.js@5/dist/svg-arrow.css" />
-
-<script>
-    tippy('[title]', {
-        theme: 'custom',
-        arrow: false,
-        delay: [200, 0],
-        zIndex: 9999999999,
-        maxWidth: 300,
-
-        content(reference) {
-            const title = reference.getAttribute('title');
-            reference.removeAttribute('title');
-            return title;
-        },
-    });
-</script>
-
+</div><!--end column-->
+</div><!--columnwrap-->
+</div><!--cont-v-2-->
+</div><!--cont-v-1-->
+</div><!--cont-h-2-->
+</div><!--cont-h-1-->
+ 
+<script>feather.replace()</script>
 </body>
 
 </html>
